@@ -1,4 +1,4 @@
-// Using ex2.go, use SLICING to create new slices
+// Using ex2.go, use SLICING to create new slices test
 package main
 
 import "fmt"
