@@ -1,4 +1,4 @@
-// Create a program that shows the "if statement" in action
+// Building on exercise #6, create a program that uses else if and else
 package main
 
 import "fmt"
@@ -6,7 +6,9 @@ import "fmt"
 func main() {
 	if true {
 		fmt.Println("True")
-	} else {
+	} else if false {
 		fmt.Println("False")
+	} else {
+		fmt.Println("Error")
 	}
 }
