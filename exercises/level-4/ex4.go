@@ -1,17 +1,17 @@
-// Using ex2.go, use SLICING to create new slices test
+// Start with slice, append to that slice the value 52, print out the slice,
+// in one statement append to that slice the values 53,54,55,
+// Print out the slice, append to the slice the second slice, and print out slice
 package main
 
 import "fmt"
 
 func main() {
-	x := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	fmt.Println(x)
-	// for i, v := range x {
-	// 	fmt.Println(i, v)
-	// }
-	fmt.Printf("%T\n", x) // print the type of x
-	fmt.Println(x[:5])
-	fmt.Println(x[2:6])
-	fmt.Println(x[1:3])
-	fmt.Println(x[:9])
+	firstSlice := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
+	firstSlice = append(firstSlice, 52)
+	fmt.Println(firstSlice)
+	firstSlice = append(firstSlice, 53, 54, 55)
+	fmt.Println(firstSlice)
+	secondSlice := []int{56, 57, 58, 59, 60}
+	firstSlice = append(firstSlice, secondSlice...)
+	fmt.Println(firstSlice)
 }
