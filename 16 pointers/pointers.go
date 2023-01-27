@@ -25,31 +25,31 @@
 
 // When to use pointers
 // Go is pass by value
-// package main
+package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+)
 
-// func main() {
-// 	x := 0
-// 	fmt.Println("x before", &x)
-// 	fmt.Println("x before", x)
-// 	foo(&x)
-// 	fmt.Println("x after", &x)
-// 	fmt.Println("x after", x)
-// }
+func main() {
+	x := 0
+	fmt.Println("x before", &x)
+	fmt.Println("x before", x)
+	foo(&x)
+	fmt.Println("x after", &x)
+	fmt.Println("x after", x)
+}
 
 // Step 2. Pointer
-// func foo(y *int) {
-// 	fmt.Println("y before", y)
-// 	fmt.Println("y before", *y)
-// 	*y = 43
-// 	fmt.Println("y after", y)
-// 	fmt.Println("y after", *y)
-// }
+func foo(y *int) {
+	fmt.Println("y before", y)
+	fmt.Println("y before", *y)
+	*y = 43
+	fmt.Println("y after", y)
+	fmt.Println("y after", *y)
+}
 
-// Step 1. No pointer
+// // Step 1. No pointer
 // func foo(y int) {
 // 	fmt.Println(y)
 // 	y = 43
