@@ -24,7 +24,7 @@ func main() {
 	fmt.Println("CPUs\t\t", runtime.NumCPU())
 	fmt.Println("Goroutine\t", runtime.NumGoroutine())
 
-	wg.Add(1)
+	wg.Add(1) // synchronization primitive
 	go foo()
 	bar()
 
